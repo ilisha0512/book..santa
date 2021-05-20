@@ -1,13 +1,12 @@
 import * as firebase from "firebase"
 require("@firebase/firestore");
 var firebaseConfig = {
-  apiKey: "AIzaSyCNq2_pMTeI09CaSqex085Yn8dthdebSxQ",
-  authDomain: "booksanta-74325.firebaseapp.com",
-  databaseURL: "https://booksanta-74325-default-rtdb.firebaseio.com",
-  projectId: "booksanta-74325",
-  storageBucket: "booksanta-74325.appspot.com",
-  messagingSenderId: "737339891254",
-  appId: "1:737339891254:web:560918b944153527530297"
+    apiKey: "AIzaSyCSKtPTkMObaMHVEq-3C5x09j-OmZ9FkYY",
+    authDomain: "bartersystem-1e3d2.firebaseapp.com",
+    projectId: "bartersystem-1e3d2",
+    storageBucket: "bartersystem-1e3d2.appspot.com",
+    messagingSenderId: "45638292292",
+    appId: "1:45638292292:web:0d56e3c13f00159c81bd11"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);

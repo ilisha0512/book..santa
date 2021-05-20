@@ -4,8 +4,9 @@ import { render } from 'react-dom';
 import { StyleSheet, Text, View } from 'react-native';
 import WelcomeScreen from './screens/WelcomeScreen'
 import { createAppContainer, createSwitchNavigator } from 'react-navigation'
-import { AppTabNavigator } from './components/AppTabNavigator'
-import { AppDrawerNavigator } from './components/AppDrawerNavigator'
+import { createBottomTabNavigator } from 'react-navigation-tabs'
+import HomeScreen from './screens/HomeScreen'
+import ExchangeScreen from './screens/ExchangeScreen'
 
 export default class App extends React.Component {
   render(){
@@ -13,11 +14,17 @@ export default class App extends React.Component {
   <AppContainer/>
   );
 }}
+
+const tabNavigator = createBottomTabNavigator({
+  HomeScreen: {screen: HomeScreen},
+  ExchangeScreen: {screen: ExchangeScreen}
+})
+
 const switchNavigator = createSwitchNavigator({
   WelcomeScreen: {screen: WelcomeScreen},
-  Drawer: {screen: AppDrawerNavigator},
-  BottomTab: {screen: AppTabNavigator}
+  BottomTab: {screen: tabNavigator}
 })
+
 const AppContainer = createAppContainer(switchNavigator)
 
 const styles = StyleSheet.create({
